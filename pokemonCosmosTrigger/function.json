@@ -1,0 +1,23 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "name": "documents",
+      "direction": "in",
+      "leaseCollectionName": "leases",
+      "connectionStringSetting": "AzureCosmosDBConnectionString",
+      "databaseName": "pokemondb",
+      "collectionName": "data",
+      "createLeaseCollectionIfNotExists": "true"
+    },
+    {
+      "type": "blob",
+      "direction": "out",
+      "name": "outputBlob",
+      "dataType": "string",
+      "path": "outcontainer/{rand-guid}",
+      "connection": "getpokemonweakness_STORAGE"
+    }
+  ]
+}

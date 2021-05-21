@@ -12,18 +12,17 @@
       ]
     },
     {
-      "type": "cosmosDB",
-      "direction": "out",
-      "name": "doc",
-      "databaseName": "pokemondb",
-      "collectionName": "data",
-      "createIfNotExists": "true",
-      "connectionStringSetting": "AzureCosmosDBConnectionString"
-    },
-    {
       "type": "http",
       "direction": "out",
       "name": "$return"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "pokemonTeamDocument",
+      "databaseName": "pokemonTeamDatabase",
+      "collectionName": "teamCollection",
+      "connectionStringSetting": "pokemoncosmos_DOCUMENTDB"
     }
   ]
 }
